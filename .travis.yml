@@ -12,7 +12,7 @@ services:
 
 before_script:
   - echo $DOCKER_PASSWORD |  docker login -u $DOCKER_ID --password-stdin
-  - curl https://cli-assets.heroku.com/install.sh
+  - curl https://cli-assets.heroku.com/install.sh | sh
   - docker login --username=$HEROKU_LOGIN --password=$HEROKU_API_KEY registry.heroku.com
 
 script:
